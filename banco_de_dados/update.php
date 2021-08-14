@@ -3,6 +3,7 @@ session_start();
 include_once 'conexao.php';
 $id = $_SESSION['id'];
 
+
 $nome = $_POST['nome'];
 $munic_atu = $_POST['munic_atu'];
 $uf = $_POST['uf'];

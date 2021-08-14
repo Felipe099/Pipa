@@ -2,6 +2,7 @@
 
 include_once 'conexao.php';
 
+
 $querySelect = $link->query("select * from cadastro");
 while ($registros = $querySelect->fetch_assoc()) :
   $id = $registros['id'];
@@ -45,6 +46,8 @@ while ($registros = $querySelect->fetch_assoc()) :
 
 endwhile;
 
+include_once 'pesquisar.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +59,23 @@ endwhile;
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
+<section>
+  <form method="POST">
+
+    <div class="input-field col s4">
+
+      <label>Buscar Nome</label>
+      <input type="text" name="busca" class="form-control" value="<?php $busca ?>">
+    </div>
+
+    <div class=" input-field col s4">
+      <input type="submit" value="Pesquisar" class="btn blue">
+
+    </div>
+
+
+  </form>
+</section>
 
 <body>
   <script language="JavaScript">

@@ -46,6 +46,13 @@
         <label for="cpf_cnpj">CPF/CNPJ</label>
       </div>
 
+      <!--MOTIVO-->
+      <div class="input-field" col s12>
+        <i class="material-icons prefix">close</i>
+        <input type="text" name="motivo" id="motivo" maxlength="15">
+        <label for="motivo">Motivo da Reprovação</label>
+      </div>
+
       <!--BOTOES-->
       <div class="input-fiels col 12s">
         <input type="submit" value="Cadastrar" class="btn blue">

@@ -206,8 +206,6 @@
         <label for="sit_vist">Situação da Vistoria</label>
       </div>
 
-
-
       <!--DATA DA VISTORIA-->
       <div class="input-field" col s12>
         <i class="material-icons prefix">date_range</i>
