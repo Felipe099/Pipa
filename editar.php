@@ -239,7 +239,7 @@ endwhile;
       </div>
 
       <!--BOTOES-->
-      <div class="input-fiels col 12s">
+      <div class="input-field col 12s">
         <input type="submit" value="Alterar" class="btn blue">
         <a href="consultas.php" class="btn red">Cancelar</a>
       </div>

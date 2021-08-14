@@ -224,7 +224,7 @@
 
 
       <!--BOTOES-->
-      <div class="input-fiels col 12s">
+      <div class="input-field col 12s">
         <input type="submit" value="Cadastrar" class="btn blue">
         <input type="submit" value="Limpar" class="btn red">
       </div>

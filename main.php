@@ -1,11 +1,7 @@
 <?php session_start() ?>
 <?php include_once 'includes/header.inc.php' ?>
 
-<nav class="green">
-  <div class="nav-wrapper container">
-    <div class="brand-logo light">Sistema de Credenciamento</div>
-  </div>
-</nav>
+<?php include_once 'includes/menu.inc.php' ?>
 
 <!--Formulario de cadastro-->
 <div class="row container">
