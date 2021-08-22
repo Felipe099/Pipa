@@ -46,6 +46,13 @@
         <label for="cpf_cnpj">CPF/CNPJ</label>
       </div>
 
+      <!--SIT DOC-->
+      <div class="input-field" col s12>
+        <i class="material-icons prefix">check_box</i>
+        <input type="text" name="sit_doc" id="sit_doc" maxlength="20" required>
+        <label for="sit_doc">SIT DOC</label>
+      </div>
+
       <!--MOTIVO-->
       <div class="input-field" col s12>
         <i class="material-icons prefix">close</i>

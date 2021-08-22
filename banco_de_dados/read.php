@@ -3,6 +3,7 @@
 include_once 'conexao.php';
 
 
+
 $querySelect = $link->query("select * from cadastro");
 while ($registros = $querySelect->fetch_assoc()) :
   $id = $registros['id'];
@@ -36,22 +37,35 @@ while ($registros = $querySelect->fetch_assoc()) :
   $data_vist = $registros['data_vist'];
   $operador = $registros['operador'];
 
+endwhile;
 
 
-  echo "<tr>";
-  echo "<td>$nome</td><td>$cpf_cnpj</td><td>$munic_atu</td><td>$uf<td>$volume</td><td>$sit_vist</td><td>$operador</td>";
+
+function busca_nome($pesquisar)
+{
+  if ($pesquisar == '') {
+    return ExecutarConsulta("SELECT * FROM cadastro order by nome");
+  } else {
+    return ExecutarConsulta("SELECT * FROM cadastro where nome like '%$pesquisar%'");
+  }
+}
+
+$dados = busca_nome(strtoupper(@$_POST['busca']));
+
+
+foreach ($dados as $k) {
+  echo  "<tr>";
+  echo "<td>{$k['nome']}</td><td>{$k['cpf_cnpj']}</td><td>{$k['munic_atu']}</td><td>{$k['uf']}<td>{$k['volume']}</td><td>{$k['sit_vist']}</td><td>{$k['operador']}</td>";
   echo "<td><a href='editar.php?id=$id'><i class='material-icons'>edit</i></a></td>";
   echo "<td><a href='#' onClick='apagar($id)'><i class='material-icons'>delete</i></a></td>";
   echo "</tr>";
+}
 
-endwhile;
-
-include_once 'pesquisar.php';
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -65,11 +79,11 @@ include_once 'pesquisar.php';
     <div class="input-field col s4">
 
       <label>Buscar Nome</label>
-      <input type="text" name="busca" class="form-control" value="<?php $busca ?>">
+      <input type="text" name="busca" id="nome" class="form-control">
     </div>
 
     <div class=" input-field col s4">
-      <input type="submit" value="Pesquisar" class="btn blue">
+      <input type="submit" value="pesquisar" class="btn blue">
 
     </div>
 
@@ -77,7 +91,9 @@ include_once 'pesquisar.php';
   </form>
 </section>
 
+
 <body>
+  </script>
   <script language="JavaScript">
     function apagar(id) {
       if (window.confirm('Deseja apagar este registro?')) {

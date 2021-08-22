@@ -23,6 +23,7 @@
         </tr>
       </thead>
       <tbody>
+
         <?php
         include_once 'banco_de_dados/read.php';
         ?>
