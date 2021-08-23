@@ -37,30 +37,13 @@ while ($registros = $querySelect->fetch_assoc()) :
   $data_vist = $registros['data_vist'];
   $operador = $registros['operador'];
 
-endwhile;
-
-
-
-function busca_nome($pesquisar)
-{
-  if ($pesquisar == '') {
-    return ExecutarConsulta("SELECT * FROM cadastro order by nome");
-  } else {
-    return ExecutarConsulta("SELECT * FROM cadastro where nome like '%$pesquisar%'");
-  }
-}
-
-$dados = busca_nome(strtoupper(@$_POST['busca']));
-
-
-foreach ($dados as $k) {
-  echo  "<tr>";
-  echo "<td>{$k['nome']}</td><td>{$k['cpf_cnpj']}</td><td>{$k['munic_atu']}</td><td>{$k['uf']}<td>{$k['volume']}</td><td>{$k['sit_vist']}</td><td>{$k['operador']}</td>";
+  echo "<tr>";
+  echo "<td>$nome</td><td>$cpf_cnpj</td><td>$munic_atu</td><td>$uf<td>$volume</td><td>$sit_vist</td><td>$operador</td>";
   echo "<td><a href='editar.php?id=$id'><i class='material-icons'>edit</i></a></td>";
   echo "<td><a href='#' onClick='apagar($id)'><i class='material-icons'>delete</i></a></td>";
   echo "</tr>";
-}
 
+endwhile;
 
 ?>
 
@@ -73,24 +56,6 @@ foreach ($dados as $k) {
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Document</title>
 </head>
-<section>
-  <form method="POST">
-
-    <div class="input-field col s4">
-
-      <label>Buscar Nome</label>
-      <input type="text" name="busca" id="nome" class="form-control">
-    </div>
-
-    <div class=" input-field col s4">
-      <input type="submit" value="pesquisar" class="btn blue">
-
-    </div>
-
-
-  </form>
-</section>
-
 
 <body>
   </script>

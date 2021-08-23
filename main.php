@@ -57,7 +57,7 @@
       <div class="input-field" col s12>
         <i class="material-icons prefix">close</i>
         <input type="text" name="motivo" id="motivo" maxlength="15">
-        <label for="motivo">Motivo da Reprovação</label>
+        <label for="motivo">Item do Motivo da Reprovação</label>
       </div>
 
       <!--BOTOES-->

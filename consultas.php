@@ -4,7 +4,7 @@
 
 
 <div class="row container">
-  <div class="col s12">
+  <div class="col 12">
     <h5 class="light">Consultas</h5>
     <hr>
 
