@@ -4,19 +4,19 @@
 
 
 <div class="row container">
-  <div class="col 12">
+  <div>
     <h5 class="light">Consultas</h5>
     <hr>
 
 
-    <table class="striped ">
+    <table class="striped centered">
 
       <thead>
         <tr>
           <th>Nome</th>
           <th>CPF/CNPJ</th>
           <th>Município</th>
-          <th>Estado</th>
+          <th>Situação DOC</th>
           <th>Volume</th>
           <th>Situação</th>
           <th>Operador</th>

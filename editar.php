@@ -187,7 +187,7 @@ endwhile;
       <div class="input-field" col s12>
         <i class="material-icons prefix">check_box</i>
         <input type="text" name="sit_doc" id="sit_doc" value="<?php echo $sit_doc ?>" maxlength="20" required>
-        <label for="sit_doc">SIT DOC</label>
+        <label for="sit_doc">Situação da Documentação</label>
       </div>
       <!--MOTIVO-->
       <div class="input-field" col s12>

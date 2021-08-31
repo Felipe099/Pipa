@@ -38,7 +38,7 @@ while ($registros = $querySelect->fetch_assoc()) :
   $operador = $registros['operador'];
 
   echo "<tr>";
-  echo "<td>$nome</td><td>$cpf_cnpj</td><td>$munic_atu</td><td>$uf<td>$volume</td><td>$sit_vist</td><td>$operador</td>";
+  echo "<td>$nome</td><td>$cpf_cnpj</td><td>$munic_atu</td><td>$sit_doc</td><td>$volume</td><td>$sit_vist</td><td>$operador</td>";
   echo "<td><a href='editar.php?id=$id'><i class='material-icons'>edit</i></a></td>";
   echo "<td><a href='#' onClick='apagar($id)'><i class='material-icons'>delete</i></a></td>";
   echo "</tr>";

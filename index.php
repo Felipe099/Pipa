@@ -161,7 +161,7 @@
       <div class="input-field" col s12>
         <i class="material-icons prefix">check_box</i>
         <input type="text" name="sit_doc" id="sit_doc" maxlength="20" required>
-        <label for="sit_doc">SIT DOC</label>
+        <label for="sit_doc">Situação da Documentação</label>
       </div>
 
       <!--MOTIVO-->
@@ -224,7 +224,6 @@
       <!--BOTOES-->
       <div class="input-field col 12s">
         <input type="submit" value="Cadastrar" class="btn blue">
-        <input type="submit" value="Limpar" class="btn red">
       </div>
 
     </fieldset>
